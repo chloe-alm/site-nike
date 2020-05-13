@@ -1,0 +1,633 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth; /*pour scroller*/
+}
+body{
+    font-family: 'Open sans', sans-serif;
+    color: #2C3E50;
+    overflow-x: hidden; /* tout ce qui sort sur l axe des x c est coupe*/
+}
+
+h1{
+    margin-bottom: 35px;
+    font-weight: 800;
+    font-size: 72px;
+     color: #E2E2E2;
+}
+
+section{
+    
+    width: 85%;
+    margin:0 auto; /*pour mettre au centre de la page en fonction de la teille de l ecran*/
+
+}
+img{
+    display: block;
+}
+
+/*header*/
+header{
+    
+    
+    margin-left: 7.5%;
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+
+}
+.right{
+    margin-right: 40px;
+}
+
+
+
+nav a{
+    font-size: 18px;
+    color: #2C3E50;
+    text-decoration: none;
+    transition: .3s;
+    
+    
+}
+nav a:hover{
+    color: #00c9ff;
+
+}
+    
+
+
+/* accueil*/
+
+#accueil{
+    
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+
+.titre, .shoe{
+    transform: translateY(-8%);/*ca a remonte les elements vers le haut*/
+
+}
+
+.titre h1{
+   
+    font-size: 96px;
+    margin-bottom: 10px;
+    background:-webkit-linear-gradient(0deg,#00c9ff,#92fa9d);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline; 
+
+}
+
+.titre h2{
+    font-weight: 800;
+    font-size: 30px;
+
+}
+
+.titre span{
+    font-weight: 600;
+}
+.titre p{
+    font-size: 24px;
+    line-height: 33px;
+}
+.titre button{
+    background: #12D0F4;
+    box-shadow: 0px 4px 15px rgba(0,0,0,0.15);
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 18px;
+    color:white;
+    padding: 12px 18px;
+    border: none;
+    margin-top:24px;
+    transition:.5s;
+    border: 2px solid transparent;
+}
+.titre button:hover{ /* pour effet bouton*/
+    color: #12D0F4;
+    background: white;
+    border: 2px solid #12D0F4;
+    cursor: pointer;
+}
+
+.bgGradient{
+    height: 750px;
+    width: 750px;
+    border-radius: 50%;
+    background: linear-gradient(218.37deg, #92fe9d 0%, #00C9FF);
+    position:absolute;
+    top:0;
+    right: 0;
+    transform: translate(12%, -17%);
+    z-index: -1;
+
+}
+.shoe {
+    animation-duration: 3s;
+    animation: masuperanimation infinite linear 3s;
+}
+.bgGradient{
+    animation: animationplan infinite linear 3s;
+
+}
+@keyframes masuperanimation{
+
+    0% {
+        transform: rotate(45deg);
+    }
+
+    50% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(45deg);
+    }
+}
+    @keyframes animationplan{
+
+        0% {
+            border-radius: 0%;
+        }
+    
+        50% {
+            border-radius: 50%;
+        }
+    
+        100% {
+            border-radius: 0%;
+        }
+
+    }
+
+/*nouveaute*/
+
+
+.cards{
+    
+     display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+}
+
+.cards div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; /*position pour que ca soit au centre*/
+}
+.cards img{
+    transition: .5s;
+
+}
+.cards img:hover{
+    filter:brightness(50%);
+    -webkit-filter: brightness(50%);
+    /*opacity:.5*/
+}
+.cards div:hover{
+    box-shadow: none;
+    cursor: pointer;
+}
+
+.cards div:hover p{ /* changegement de la taille du texte mais en cliquant sur la div*/
+    font-size: 34px;
+}
+
+
+.cards p{
+    position: absolute; /*idem*/
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 33px;
+    text-align: center;
+    
+    color: #FFFFFF;
+    
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.9);
+}
+
+.card1{
+    box-shadow: 30px 30px 0 #00C9FF;
+   
+
+}
+
+.card2{
+    box-shadow: 0px 30px 0 #92FE9D;
+    
+}
+
+.card3{
+    box-shadow: -30px 30px 0 #00C9FF;
+    
+}
+
+/* sportswear*/
+
+#Sportswear{
+    
+    margin-top: 120px;
+
+}
+.blog{
+   
+    position: relative; /*pour que l article circule ds le blog*/
+}
+.blog img{
+    width: 100%;/*pour qu elle fasse toute la largeur*/
+}
+
+article{
+    position: absolute;
+    top:0;
+    right: 0;
+    width: 45%;
+    background: white;
+    text-align: center;
+    padding: 13px 25px;
+
+}
+
+article h2{
+    font-weight: 800;
+font-size: 36px;
+line-height: 49px;
+text-align: center;
+color: #92FE9D;
+}
+
+article span{
+    font-size: 600;
+}
+article p{
+    font-size: 18px;
+line-height: 25px;
+text-align: justify;
+
+color: #2C3E50;
+
+}
+article button{
+ 
+
+background: #92FE9D;
+box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+border-radius: 31px;
+font-weight: bold;
+font-size: 18px;
+line-height: 25px;
+color: white;
+padding: 13px 20px;
+border: none;
+margin-top:24px;
+transition:.5s;
+    border: 2px solid transparent;
+
+
+}
+article button:hover{
+    color:#92FE9D;
+    background: white;
+    border: 2px solid #92FE9D;
+    cursor: pointer;
+
+}
+
+#contact{
+width: 100%;
+margin-top: 90px;
+}
+
+#contact h1, footer{
+    width: 85%;
+    margin: 0 auto;
+
+}
+.gradient{
+    background: linear-gradient(270deg, #92FE9D 0%, #00C9FF 100% );
+    
+}
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+input, textarea {
+    background: white;
+    border-radius: 6px;
+    width: 40%;
+    padding: 15px 30px; /*haut DROITE*/
+    border:none;
+    font-size: 24px;
+    color:#828282;
+    margin: 10px 0;
+}
+
+textarea{
+    height: 188px;
+    resize: none; /* pour que ca bouge plus */
+}
+
+form button{
+    border: 3px solid #FFFFFF;
+    box-sizing: border-box;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.25);
+    border-radius: 6px;
+    background: transparent;
+    padding: 15px 50px;
+    font-weight: 900;
+    font-size: 24px;
+    color: white;
+    text-transform: uppercase;
+    margin:40px 0;
+    transition:.5s;
+    border: 2px solid transparent;
+}
+form button:hover{
+    color:#92FE9D;
+    background: white;
+    border: 2px solid #92FE9D;
+    cursor: pointer;
+}
+footer {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.reseaux{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 20%;
+
+}
+
+.reseaux div{
+    background: white;
+    border-radius:50%;
+    padding:10px;
+}
+/*media*/
+
+@media screen and (max-width:650px){
+  
+    h1{
+        margin-bottom: 22px;
+        font-size: 36px;
+        text-align: center;
+         }
+    
+    section{
+        
+        width: 100%;
+        }
+    header{
+    
+        margin-left: 0%;
+        width: 100%;
+        flex-direction: column;
+     }
+    .right{
+        margin-right: 0;
+    }
+    
+    
+    
+    nav a{
+        display: block;
+        text-align: center;
+        margin:20px 0; /*pour alle a la ligne*/
+        }
+    
+    /* accueil*/
+    
+    #accueil{
+        flex-direction: column;
+        
+    }
+    
+    .titre, .shoe{
+        transform: translateY(0%);/*ca a remonte les elements vers le haut*/
+        
+    
+    }
+    .titre{
+       
+        text-align: center;
+        margin:0 auto;
+        width: 85%;
+    }
+    
+    
+    
+    .titre h2{
+        
+        font-size: 24px;
+        text-align: left;
+    
+    }
+    
+   
+    .titre p{
+        font-size: 18px;
+        line-height: 25px; /*espace entre les ligen de paragraphe*/
+        text-align: left;
+    }
+    .bgGradient{
+        display: none;
+    }
+
+    .shoeGradient{
+        background: linear-gradient(282.43deg, #92FE9D 0%, #00C9FF 88.65%);
+        height: 286px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 35px;
+        
+    }
+    .shoe {
+        transform:rotate(27deg);
+        width: 70%;
+       
+    }
+
+    /*nouveautes*/
+    #nouveautes {
+        margin-top: 40px;
+    }
+    
+
+    .cards{
+        
+        width: 100%;
+        flex-direction: column;
+    
+    
+    }
+    #nouveautes,.cards img {
+        width: 100%;
+    }
+    
+    .cards div{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative; 
+        margin-top: 30px;
+    }
+
+    .cards p{
+        font-size:18px;
+        line-height: 25px;
+    }
+
+    .card1{
+        
+        box-shadow: 0px 30px 0 #00C9FF;
+    margin-bottom: 30px;
+    width: 100%;
+    }
+
+    .card2{
+        box-shadow: 0px 30px 0#92FE9D;
+    margin-bottom: 30px;
+    width: 100%;
+        
+    }
+    
+    .card3{
+        box-shadow: 0px 30px 0 #00C9FF;
+        margin-bottom: 30px;
+        width: 100%;
+        
+    }
+
+    /* sportswear*/
+
+    #Sportswear{
+    
+        height: auto;
+    
+    }
+    .blog{
+       
+        display:flex;
+        flex-direction: column;
+    }
+    .blog img{
+        width: 100%;/*pour qu elle fasse toute la largeur*/
+    }
+    
+    article{
+        position: absolute;
+        top:220px;
+        right: 0;
+        width: 100%;
+        
+    
+    }
+    
+    article h2{
+        
+    font-size: 20px;
+    
+    }
+    
+   
+    article p{
+        font-size: 14px;
+    line-height: 19px;
+    }
+    #contact{
+        
+        height: auto;
+        width: 100%;
+        margin-top: 380px;
+        }
+        
+        #contact h1, footer{
+            width: 85%;
+            margin: 0 auto;
+        
+        }
+        .gradient{
+            background: linear-gradient(270deg, #92FE9D 0%, #00C9FF 100% );
+            
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        
+        }
+        form input, textarea {
+            font-size:18px;
+            width: 80%;
+            
+        }
+        
+        textarea{
+            height: 188px;
+            resize: none; /* pour que ca bouge plus */
+        }
+        
+        form button{
+            border: 3px solid #FFFFFF;
+            box-sizing: border-box;
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.25);
+            border-radius: 6px;
+            background: transparent;
+            padding: 15px 50px;
+            font-weight: 900;
+            font-size: 24px;
+            color: white;
+            text-transform: uppercase;
+            margin:40px 0;
+        }
+        
+        footer{
+            display:flex;
+            justify-content: space-between;
+            align-items: center;
+        
+        }
+        
+        .reseaux{
+            display:flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 20%;
+        
+        }
+        
+        .reseaux div{
+            background: white;
+            border-radius:50%;
+            padding:10px;
+        }
+
+    
+
+
+
+}
